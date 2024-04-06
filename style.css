@@ -226,7 +226,7 @@ body {
     transform: scale(0.98);
 }
 /* Media query per adattare lo stile ai dispositivi mobili */
-@media only screen and (max-width: 768px) {
+@media only screen and (max-width: 800px) {
     .container {
         border-radius: 15px;
     }
