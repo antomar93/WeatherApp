@@ -5,6 +5,8 @@
 }
 
  *{   
+    margin: 0;
+    padding: 0;
     line-height: 1.25em;
     box-sizing: border-box;
 }
@@ -24,6 +26,9 @@ body{
 }
 
 .container{
+    margin: 0 auto;
+    min-width: 800px;
+    max-width: 1000px;
     border-radius: 25px;
     box-shadow: 0 0 70px -10px rgba(0,0,0,0.2);
     background-color: #222831a1;
