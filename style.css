@@ -35,7 +35,11 @@ body {
     box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
     background-color: #222831a1;
     color: #fff;
-    height: 450px;
+    height: 550px;
+    display: flex; /* Utilizziamo il flexbox per posizionare gli elementi */
+    flex-wrap:nowrap;
+    overflow:visible;
+
 }
 
 /* Parte relativa al meteo */
@@ -104,7 +108,7 @@ body {
 
 .weather-icon img {
     filter: drop-shadow(0 0 2px #fff);
-    width: 100%;
+    width: 130%;
 }
 
 .weather-temp {
@@ -155,10 +159,12 @@ body {
 
 .week-list>li {
     float: left;
+    height: 250px;
     padding: 15px;
     cursor: pointer;
     transition: 200ms ease;
     border-radius: 10px;
+    margin-bottom: 30px;;
 }
 
 .week-list>li:hover {
@@ -176,8 +182,8 @@ body {
 
 .week-list>li .day-name {
     display: block;
-    margin: 5px 0 0 0;
-    margin-top: 3px;
+    margin: 5px;
+    margin-top: 43px;
     text-align: center;
 }
 
@@ -234,5 +240,8 @@ body {
     .week-list li {
         width: calc(20% - 10px); /* Riduciamo il numero di colonne per dispositivi più piccoli */
         margin-bottom: 10px;
+    }
+    .info-side {
+        width:auto; 
     }
 }

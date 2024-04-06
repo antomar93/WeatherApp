@@ -76,7 +76,7 @@ async function getWeather(city) {
         const iconElements = document.querySelectorAll('.day-icon');
   
         dayElements.forEach((dayElement, index) => {
-            const day = Object.keys(dailyForecast)[index];
+            const day = Object.keys(dailyForecast)[index + 1];
             const data = dailyForecast[day];
             dayElement.textContent = day;
             tempElements[index].textContent = `${Math.round(data.minTemp)}º / ${Math.round(data.maxTemp)}º`;
