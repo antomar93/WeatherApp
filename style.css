@@ -232,7 +232,7 @@ body {
     }
 
     .week-list li {
-        width: calc(40% - 10px); /* Riduciamo il numero di colonne per dispositivi più piccoli */
+        width: calc(20% - 10px); /* Riduciamo il numero di colonne per dispositivi più piccoli */
         margin-bottom: 10px;
     }
 }
