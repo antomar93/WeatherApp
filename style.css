@@ -1,6 +1,8 @@
- :root{
-    --gradient:linear-gradient(135deg, #72EDF2 10%, #5151E5 100%);
- }
+:root {
+    --day-image: url("day.gif");
+    --night-image: url("night.gif");
+    --gradient: linear-gradient(135deg, #f3f3f3 10%, #4848ce 100%);
+}
 
  *{   
     line-height: 1.25em;
@@ -24,21 +26,20 @@ body{
 .container{
     border-radius: 25px;
     box-shadow: 0 0 70px -10px rgba(0,0,0,0.2);
-    background-color: #222831;
+    background-color: #222831a1;
     color: #fff;
     height: 450px;
 }
 
-.weather-side{
+.weather-side {
     position: relative;
     height: 100%;
     border-radius: 25px;
-    background-image: url("https://img.freepik.com/free-photo/sunset-beach-sea-wave_1150-11145.jpg");
+    background-image: var(--day-image); 
     width: 300px;
-    box-shadow: 0 0 20px -10px rgba(0,0,0,0.2);
-    transition: transform 300ms ease;
-    transform: translateZ(0) scale(1.02) perspective(1000px);
-    float:left;
+    box-shadow: 0 0 20px -10px rgba(0, 0, 0, 0.2);
+    transform: translateZ(0) scale(1.0) perspective(1000px);
+    float: left;
 }
 
 .weather-side:hover{
@@ -112,8 +113,8 @@ body{
 
 .today-info{
     padding:25px;
-    margin: 25px;
-    margin-bottom: 10px;
+    margin: 15px;
+    margin-bottom: 30px;
     box-shadow: 0 0 50px -5px rgba(0, 0, 0);
     border-radius: 10px;
 }
@@ -133,9 +134,10 @@ body{
 
 .week-list{
     list-style-type: none;
-    padding: 0;
-    margin: 10px 35px;
-    box-shadow: 0 0 50px -5px rgba(0, 0, 0, 0.25);
+    padding: 10px;
+    height: 160px;
+    margin: 5px 15px;
+    box-shadow: 0 0 50px -5px rgba(0, 0, 0);
     border-radius: 10px;
 }
 
@@ -162,7 +164,8 @@ body{
 
 .week-list>li .day-name{
     display: block;
-    margin:  10px 0 0 0;
+    margin:  5px 0 0 0;
+    margin-top: 3px;
     text-align: center;
 }
 .week-list>li .day-icon{
@@ -194,14 +197,13 @@ padding: 25px 35px;
 
 .location-input{
     position:relative;
-    margin-top: 80px;
     width: 100%;
     border:none;
     border-radius: 15px;
-    padding: 20px;
-    background-image: rgba(255, 255, 255, 0.8);
+    margin-top: 2%;
+    padding: 12px;
+    background-color: rgba(255, 255, 255, 0.7);
     color: rgb(0, 0, 0);
-    font-weight: 00;
     font-size: 16px;
     box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
     transition: transform 200ms ease;

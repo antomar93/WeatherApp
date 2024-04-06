@@ -1,73 +1,76 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
+    <!-- Icon -->
+    <link rel="icon" href="cloudy.png">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <div class="weather-side">
-            <div class="weather-gradient"></div>
-            <div class="date-container">
-                <h2 class="date-dayname"></h2>
-                <span class="date-day"></span>
-                <i class="fas fa-map-marker-alt location-icon"></i>
-                <span class="location"></span>
-            </div>
-            <div class="weather-container">
-                <span class="weather-icon"></span>
-                <h1 class="weather-temp"></h1>
-                <h3 class="weather-desc"></h3>
-            </div>
+<div class="container">
+    <div class="weather-side">
+        <div class="weather-gradient"></div>
+        <div class="date-container">
+            <h2 class="date-dayname"></h2>
+            <span class="date-day"></span>
+            <i class="fas fa-map-marker-alt location-icon"></i>
+            <span class="location"></span>
         </div>
-        <div class="info-side">
-            <div class="today-info-container">
-                <div class="today-info">
-                    <div class="humidity">
-                        <span class="title"><i class="fas fa-tint"></i> HUMIDITY</span>
-                        <span class="value humidity-value"></span>
-                    </div>
-                   <br>
-                    <div class="wind">
-                        <span class="title"><i class="fas fa-wind"></i> WIND</span>
-                        <span class="value wind-value"></span>
-                    </div>
-                </div>
-            </div>
-            <div class="week-container">
-                <ul class="week-list">
-                    <li>
-                        <span class="day-name"></span>
-                        <span class="day-temp"></span>
-                        <span class="day-icon"></span>
-                    </li>
-                    <li>
-                        <span class="day-name"></span>
-                        <span class="day-temp"></span>
-                        <span class="day-icon"></span>
-                    </li>
-                    <li>
-                        <span class="day-name"></span>
-                        <span class="day-temp"></span>
-                        <span class="day-icon"></span>
-                    </li>
-                    <li>
-                        <span class="day-name"></span>
-                        <span class="day-temp"></span>
-                        <span class="day-icon"></span>
-                    </li>
-                </ul>
-            </div>
-            <div class="location-container">
-                <input class="location-input" type="text" id="city" value="New York">
-            </div>
+        <div class="weather-container">
+            <span class="weather-icon"></span>
+            <h1 class="weather-temp"></h1>
+            <h3 class="weather-desc"></h3>
         </div>
     </div>
+    <div class="info-side">
+        <div class="today-info-container">
+            <div class="today-info">
+                <div class="humidity">
+                    <span class="title"><i class="fas fa-tint"></i> HUMIDITY</span>
+                    <span class="value humidity-value"></span>
+                </div>
+                <br>
+                <div class="wind">
+                    <span class="title"><i class="fas fa-wind"></i> WIND</span>
+                    <span class="value wind-value"></span>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <div class="week-container">
+            <ul class="week-list">
+                <li>
+                    <span class="day-name"></span>
+                    <span class="day-temp"></span>
+                    <span class="day-icon"></span>
+                </li>
+                <li>
+                    <span class="day-name"></span>
+                    <span class="day-temp"></span>
+                    <span class="day-icon"></span>
+                </li>
+                <li>
+                    <span class="day-name"></span>
+                    <span class="day-temp"></span>
+                    <span class="day-icon"></span>
+                </li>
+                <li>
+                    <span class="day-name"></span>
+                    <span class="day-temp"></span>
+                    <span class="day-icon"></span>
+                </li>
+            </ul>
+        </div>
+        <div class="location-container">
+            <input class="location-input" type="text" id="city" value="New York">
+        </div>
+    </div>
+</div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
-    <script src="script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/js/all.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.24.0/axios.min.js"></script>
+<script src="script.js"></script>
 </body>
 </html>

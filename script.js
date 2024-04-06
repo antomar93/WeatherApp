@@ -1,11 +1,10 @@
 document.getElementById('city').addEventListener('input', function () {
     var city = this.value;
     getWeather(city);
-  });
+});
   
-  async function getWeather() {
+async function getWeather(city) {
     try {
-        var city = document.getElementById('city').value;
         console.log(city);
   
         const response = await axios.get('https://api.openweathermap.org/data/2.5/forecast', {
@@ -32,8 +31,6 @@ document.getElementById('city').addEventListener('input', function () {
                     humidity: data.main.humidity,
                     windSpeed: data.wind.speed,
                     icon: data.weather[0].icon,
-  
-  
                 };
             } else {
                 dailyForecast[day].minTemp = Math.min(dailyForecast[day].minTemp, data.main.temp_min);
@@ -56,7 +53,23 @@ document.getElementById('city').addEventListener('input', function () {
   
         document.querySelector('.humidity .value').textContent = dailyForecast[new Date().toLocaleDateString('en-US', { weekday: 'long' })].humidity + ' %';
         document.querySelector('.wind .value').textContent = dailyForecast[new Date().toLocaleDateString('en-US', { weekday: 'long' })].windSpeed + ' m/s';
-  
+        const sunriseSunsetResponse = await axios.get('https://api.openweathermap.org/data/2.5/weather', {
+            params: {
+                q: city,
+                appid: '54a57bc234ad752a4f59e59cd372201d',
+                units: 'metric'
+            },
+        });
+
+        const sunriseUnix = sunriseSunsetResponse.data.sys.sunrise;
+        const sunsetUnix = sunriseSunsetResponse.data.sys.sunset;
+
+        const currentUnix = Math.floor(Date.now() / 1000); // Tempo corrente in formato Unix
+
+        const isDay = currentUnix > sunriseUnix && currentUnix < sunsetUnix;
+
+        toggleDayNightImage(isDay);
+
   
         const dayElements = document.querySelectorAll('.day-name');
         const tempElements = document.querySelectorAll('.day-temp');
@@ -73,15 +86,24 @@ document.getElementById('city').addEventListener('input', function () {
     } catch (error) {
         console.error(error.message);
     }
-  }
-  
-  function getWeatherIcon(iconCode) {
+}
+
+function toggleDayNightImage(isDay) {
+    const weatherSide = document.querySelector('.weather-side');
+    if (isDay) {
+        weatherSide.style.backgroundImage = 'var(--day-image)';
+    } else {
+        weatherSide.style.backgroundImage = 'var(--night-image)';
+    }
+}  
+
+function getWeatherIcon(iconCode) {
     const iconBaseUrl = 'https://openweathermap.org/img/wn/';
     const iconSize = '@2x.png';
     return `<img src="${iconBaseUrl}${iconCode}${iconSize}" alt="Weather Icon">`;
-  }
-  
-  document.addEventListener("DOMContentLoaded", function () {
+}
+
+document.addEventListener("DOMContentLoaded", function () {
     getWeather();
     setInterval(getWeather, 900000);
- });
+});
