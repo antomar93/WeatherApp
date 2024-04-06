@@ -17,8 +17,7 @@
 }
 
 /* Layout generale */
-body {
-    margin: 0;
+body {   
     width: 100%;
     height: 100vh;
     background: var(--gradient);
@@ -29,16 +28,13 @@ body {
 
 .container {
     margin: 0 auto;
-    width: 46%; /* Larghezza del 46% rispetto alla finestra del browser */
-    min-width: 600px; 
+    width: 46%; /* Larghezza del 46% rispetto alla finestra del browser */ 
     border-radius: 25px;
     box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.2);
     background-color: #222831a1;
     color: #fff;
     height: 550px;
     display: flex; /* Utilizziamo il flexbox per posizionare gli elementi */
-    flex-wrap:nowrap;
-    overflow:visible;
 
 }
 
@@ -46,7 +42,7 @@ body {
 .weather-side {
     position: relative;
     height: 100%;
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
     background-image: var(--day-image);
     width: 40%; /* Larghezza del 40% rispetto al contenitore principale */
     max-width: 300px; /* Larghezza massima di 300px */
@@ -66,7 +62,7 @@ body {
     top: 0;
     left: 0;
     background-image: var(--gradient);
-    border-radius: 25px;
+    border-radius: 25px 0 0 25px;
     opacity: 0.4;
 }
 
@@ -123,6 +119,7 @@ body {
 
 .info-side {
     position: relative;
+    display: wrap;
     float: left;
     height: 100%;
     padding-top: 25px;
@@ -155,6 +152,7 @@ body {
     height: 160px;
     margin: 5px 15px;
     border-radius: 10px;
+    overflow:none;
 }
 
 .week-list>li {
@@ -211,7 +209,9 @@ body {
 }
 
 .location-container {
-    padding: 25px 35px;
+    padding: 25px;
+    margin: 0 auto;
+    max-width: 100%;
 }
 
 .location-input {
@@ -224,7 +224,7 @@ body {
     background-color: rgba(255, 255, 255, 0.7);
     color: rgb(0, 0, 0);
     font-size: 16px;
-    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 0 30px -5px rgba(0, 0, 0, 0.541);
     transition: transform 200ms ease;
 }
 
