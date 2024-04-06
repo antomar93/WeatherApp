@@ -232,16 +232,31 @@ body {
     transform: scale(0.98);
 }
 /* Media query per adattare lo stile ai dispositivi mobili */
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 768px) {
     .container {
+        width: 100%;
+        height: auto;
         border-radius: 15px;
     }
 
-    .week-list li {
-        width: calc(20% - 10px); /* Riduciamo il numero di colonne per dispositivi più piccoli */
-        margin-bottom: 10px;
+    .weather-side {
+        width: 100%;
+        max-width: none;
     }
+
+    .date-container {
+        width: 100%;
+    }
+
     .info-side {
-        width:auto; 
+        width: 100%;
+    }
+
+    .week-list li {
+        width: calc(33.33% - 10px);
+        margin-bottom: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
