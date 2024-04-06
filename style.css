@@ -231,32 +231,3 @@ body {
 .location-input:hover {
     transform: scale(0.98);
 }
-/* Media query per adattare lo stile ai dispositivi mobili */
-@media only screen and (max-width: 768px) {
-    .container {
-        width: 100%;
-        height: auto;
-        border-radius: 15px;
-    }
-
-    .weather-side {
-        width: 100%;
-        max-width: none;
-    }
-
-    .date-container {
-        width: 100%;
-    }
-
-    .info-side {
-        width: 100%;
-    }
-
-    .week-list li {
-        width: calc(33.33% - 10px);
-        margin-bottom: 10px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-}
