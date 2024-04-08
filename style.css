@@ -14,7 +14,7 @@
 
 .container {
     margin: 0 auto;
-    width: 46%; /* Larghezza del 46% rispetto alla finestra del browser */ 
+    width: 880px;
     height: 550px;
     border-radius: 25px;
     box-shadow: 0 0 70px -10px rgba(0, 0, 0, 0.438);
