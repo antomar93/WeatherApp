@@ -1,3 +1,4 @@
+
 document.getElementById('city').addEventListener('input', function () {
     var city = this.value;
     getWeather(city);
