@@ -5,6 +5,7 @@
     --gradient: linear-gradient(135deg, #f3f3f3 10%, #4848ce 100%);
 }
 
+
 /* Reset CSS */
 * {
     margin: 0;
@@ -229,4 +230,15 @@ body {
 
 .location-input:hover {
     transform: scale(0.98);
+}
+.linkedin{
+    text-align: center;
+    left: 500px;
+    font-size: 15px;
+    color: rgba(255, 255, 255, 0.678);
+    margin-top:-10px;
+}
+a{
+    font-size: 18px;
+    color: #fff;
 }
